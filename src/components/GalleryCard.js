@@ -1,12 +1,13 @@
 import React from "react";
 
-const GalleryCard = () => {
+const GalleryCard = props => {
   return (
     <div className="gallery-card">
       <div
         style={{
-          background: "url('https://picsum.photos/800/600') no-repeat",
-          backgroundSize: "100%"
+          background: `url(${props.testImage})`,
+          backgroundSize: "100%",
+          marginTop: "10px"
         }}
         className="card-image"
       ></div>
