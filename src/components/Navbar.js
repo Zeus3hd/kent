@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../imgs/200pix.png";
 import menu from "../imgs/menu.png";
 
 const Navbar = () => {
+  const [sidebarVisible, setVisible] = useState(false);
+
   return (
     <nav>
       <a href="#a">
         <img alt="logo" src={logo} id="logo" />
       </a>
-      <a href="#b">
+      <button onClick={() => setVisible(!sidebarVisible)}>
         <img alt="menu" src={menu} id="menu" />
-      </a>
+      </button>
+      <div id="side-nav" className={sidebarVisible ? "visible" : "invisible"}>
+        <ul>
+          <li>
+            <a href="#a">Home</a>
+          </li>
+          <li>
+            <a href="#a">Explore</a>
+          </li>
+          <li>
+            <a href="#a">Investment</a>
+          </li>
+          <li>
+            <a href="#a">Services</a>
+          </li>
+          <li>
+            <a href="#a">About us</a>
+          </li>
+          <li>
+            <a href="#a">Contact us</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
