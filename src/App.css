@@ -35,9 +35,10 @@ nav button {
   padding: 0;
   margin: 0;
   padding: 10px;
+  font-weight: 500;
 }
 #side-nav ul li a {
-  color: black;
+  color: #fa885c;
   text-decoration: none;
   cursor: pointer;
 }
