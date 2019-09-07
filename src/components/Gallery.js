@@ -13,7 +13,16 @@ const Gallery = () => {
       <GalleryCard testImage={testImage} />
       <GalleryCard testImage={testImage} />
       <div id="filter">
-        <img src={filterIcon} alt="filter" />
+        <div id="filters-form">
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <button>
+          <img src={filterIcon} alt="filter" />
+        </button>
       </div>
     </div>
   );

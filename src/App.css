@@ -79,14 +79,28 @@ nav button {
 #filter {
   position: fixed;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   bottom: 0;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
+  height: 50%;
   background: rgba(211, 211, 211, 0.8);
   border-radius: 30px 30px 0 0;
+  transition: 0.5s;
+  z-index: 3;
 }
-#filter img {
+#filters-form {
+}
+
+#filter button {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+}
+#filter button img {
   width: 24px;
 }
