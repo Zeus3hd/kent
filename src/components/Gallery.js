@@ -20,7 +20,7 @@ const Gallery = () => {
           <p>test</p>
           <p>test</p>
         </div>
-        <button>
+        <button onClick={() => console.log("clicked")}>
           <img src={filterIcon} alt="filter" />
         </button>
       </div>
