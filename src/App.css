@@ -22,6 +22,7 @@ nav button {
   height: 100vh;
   width: 50%;
   transition: 0.5s;
+  z-index: 3;
 }
 .visible {
   left: 0 !important;
@@ -58,6 +59,7 @@ nav button {
   width: 80%;
   padding: 20px;
   margin: auto;
+  position: relative;
 }
 
 .gallery-card {
@@ -72,4 +74,66 @@ nav button {
 .card-image {
   height: 200px;
   border-radius: 1rem;
+}
+
+#filter {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  background: rgba(211, 211, 211, 0.8);
+  border-radius: 30px 30px 0 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+#filters-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.dropdown-filter {
+  display: flex;
+  margin: 20px 9px;
+  align-items: center;
+}
+.dropdown-filter label {
+  color: #fa885c;
+  flex: 1;
+}
+.dropdown-filter select {
+  flex: 1;
+  background: #fff;
+  height: 30px;
+}
+
+#filter button {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+#filter button img {
+  width: 24px;
+}
+
+#price-form {
+  display: flex;
+  color: #fa885c;
+  margin: 20px 9px;
+  align-items: center;
+  justify-content: center;
+}
+
+#price-form label {
+  flex: 2;
+}
+#price-form input {
+  flex: 1;
+  margin: 0 2px;
+  height: 30px;
 }
