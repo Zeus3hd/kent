@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import testImage from "../imgs/1.jpg";
 import testImage2 from "../imgs/2.jpg";
 import testImage3 from "../imgs/3.jpg";
 import GalleryCard from "./GalleryCard";
 import filterIcon from "../imgs/filter.png";
 const Gallery = () => {
+  const [filterVisible, setFilterVisible] = useState(true);
   return (
     <div id="gallery">
       <GalleryCard testImage={testImage} />
@@ -12,7 +13,8 @@ const Gallery = () => {
       <GalleryCard testImage={testImage3} />
       <GalleryCard testImage={testImage} />
       <GalleryCard testImage={testImage} />
-      <div id="filter">
+      <div id="filter" style={{ height: filterVisible ? "40px" : "90%" }}>
+        <div style={{ margin: "20px 0" }}></div>
         <div id="filters-form">
           <div className="dropdown-filter">
             <label htmlFor="Location">Location</label>
@@ -67,7 +69,7 @@ const Gallery = () => {
             <input name="max-price" placeholder="maximum price" />
           </div>
         </div>
-        <button onClick={() => console.log("clicked")}>
+        <button onClick={() => setFilterVisible(!filterVisible)}>
           <img src={filterIcon} alt="filter" />
         </button>
       </div>
